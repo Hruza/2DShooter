@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 0e4b2c5c6a60e354088451cb2a4fca85, type: 3}
+    - {fileID: 102900000, guid: fdf5d6b52a523f94cb639b11d4585308, type: 3}
+    - {fileID: 102900000, guid: bf13dc3829baa144a82a81f4d0481df3, type: 3}
+    - {fileID: 102900000, guid: 41343d4e073de3f4e9bc844629a70a86, type: 3}
+    - {fileID: 102900000, guid: 8523d5f2e67081a45ab1f1cb17a6a0bb, type: 3}
+    totalSpriteSurfaceArea: 536740
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c692f4209a5a15245b25c76bd5b34ccf, type: 3}
+  - {fileID: 21300000, guid: feb23c20a3b8911488b927c465fba1a1, type: 3}
+  - {fileID: 21300000, guid: 3766bb9025b964f429f25fd2f3edeeba, type: 3}
+  - {fileID: 21300000, guid: cfb2a8115c5a6da4eac519ee8f2dbb2f, type: 3}
+  - {fileID: 21300000, guid: 41484c21d404e50469df41626ef73d2a, type: 3}
+  - {fileID: 21300000, guid: 0b6f8e619ab23ec45974910bcb54495e, type: 3}
+  - {fileID: 21300000, guid: 4b2e77712e468774fa438ae8fb661abf, type: 3}
+  - {fileID: 21300000, guid: 2b7919c1da3a64541ae19520863a2dad, type: 3}
+  - {fileID: 21300000, guid: 3c9769e1d5fca154c8f48c5ef0671e2e, type: 3}
+  - {fileID: 21300000, guid: 773119428eea9034581ab851ef74ba2b, type: 3}
+  - {fileID: 21300000, guid: 8fe7b7a27fddf2c46b6b10cbefab4d73, type: 3}
+  - {fileID: 21300000, guid: ad0014c2bf57c1f4697e337ed74451fd, type: 3}
+  - {fileID: 21300000, guid: de43abc2f3f62ea48b688805f03beceb, type: 3}
+  - {fileID: 21300000, guid: 3e4fb7d2dcb75374f8259b3ae11da461, type: 3}
+  - {fileID: 21300000, guid: 0255c853deffe45468e5de669475de56, type: 3}
+  - {fileID: 21300000, guid: d9debd14284e76948b679fecdb7bfe6f, type: 3}
+  - {fileID: 21300000, guid: f2175f3423278bd4386fa12fcbe265fa, type: 3}
+  - {fileID: 21300000, guid: 5b7846446e801f344a57865c98fb294a, type: 3}
+  - {fileID: 21300000, guid: c16a96545d6ba3441800b1755217d6c5, type: 3}
+  - {fileID: 21300000, guid: 9311619468469714aabb0ed61e703ca6, type: 3}
+  - {fileID: 21300000, guid: 6dc538b4827d6b045b4c76079ba2b612, type: 3}
+  - {fileID: 21300000, guid: cf408cb42ee6ac946b16c2029b28e71c, type: 3}
+  - {fileID: 21300000, guid: 91e11a1559eab11409fcd77edf9549f7, type: 3}
+  - {fileID: 21300000, guid: 1917784586143d648a173dfbf6809d6e, type: 3}
+  - {fileID: 21300000, guid: 4727745509682ad4ea44878394999dd3, type: 3}
+  - {fileID: 21300000, guid: b3ae6ec5f2b452f4998b7df2b80cb3dd, type: 3}
+  - {fileID: 21300000, guid: c2544a5741b00ee4a9d7aa244e71dedd, type: 3}
+  - {fileID: 21300000, guid: 69ea9f67ebc68d94c9596ad64b09ba45, type: 3}
+  - {fileID: 21300000, guid: 874cfb87a5f9b144c8c79001c7f630f0, type: 3}
+  - {fileID: 21300000, guid: d81762a71fe25cf48880969ced2a0da9, type: 3}
+  - {fileID: 21300000, guid: af86b4a77023b344dad869d369ce3348, type: 3}
+  - {fileID: 21300000, guid: 18466dc7050efbd4382a2795b5738f86, type: 3}
+  - {fileID: 21300000, guid: 3213a6d741dfc1b4cb127b7b65b90f44, type: 3}
+  - {fileID: 21300000, guid: 8b315f587ef88d14d83a57414c938860, type: 3}
+  - {fileID: 21300000, guid: b9633ac81b08e8646bc6af236bacff88, type: 3}
+  - {fileID: 21300000, guid: 1d2f9d39c0e153248a6c4d4fcbd46eb6, type: 3}
+  - {fileID: 21300000, guid: a67067c9482c04c45a4adb45ad17fb13, type: 3}
+  - {fileID: 21300000, guid: 4554763ad7dbe274d9857583f5ed8a64, type: 3}
+  - {fileID: 21300000, guid: 4feb267a3c748034f98c2ac957bba863, type: 3}
+  - {fileID: 21300000, guid: 80d8be7a034f803408cb8b7ec1e1c53f, type: 3}
+  - {fileID: 21300000, guid: f3a414ea093f40e428983af0adb40b84, type: 3}
+  - {fileID: 21300000, guid: 13ce857b3f4c0914dbdd8ec7ae3b06f0, type: 3}
+  - {fileID: 21300000, guid: c09ee4ab53cf7534095ef3a7377e935d, type: 3}
+  - {fileID: 21300000, guid: 314a28ab248de5e43899167343cb4efe, type: 3}
+  - {fileID: 21300000, guid: 3d06d31c50f590846adb62c1eb2ecb14, type: 3}
+  - {fileID: 21300000, guid: 40f1ac2c6cf9c7e40bb1c0b76f9bbfc2, type: 3}
+  - {fileID: 21300000, guid: 55c2f64c39430a74cbc30f82f7d8c0a8, type: 3}
+  - {fileID: 21300000, guid: 5b0abadc3376c094b8cec9ee024a79de, type: 3}
+  - {fileID: 21300000, guid: 66afb42d4e68f354bb942600280cc11d, type: 3}
+  - {fileID: 21300000, guid: 0c3842fded032c24f9b1fe82770b8b28, type: 3}
+  - {fileID: 21300000, guid: b9e60f4e046d2da40a63ec9feffcb6e8, type: 3}
+  - {fileID: 21300000, guid: 2bc6158e5b65a134a94869b3b7b0000e, type: 3}
+  - {fileID: 21300000, guid: eb39ca8e591dd3e4bb1feb5704386015, type: 3}
+  - {fileID: 21300000, guid: 124fe19e74cf39b40a35b36ca260ed5b, type: 3}
+  - {fileID: 21300000, guid: c810b9ee26790d04d82b724345951051, type: 3}
+  - {fileID: 21300000, guid: 2090a6fec7b2f554ebdab6342e99f32e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Blackhole5
+  - Shotgun12
+  - Blackhole12
+  - Blackhole6
+  - GlockRNG8
+  - GlockRNG6
+  - Sniper5
+  - Blackhole16
+  - GlockRNG4
+  - Ammoself
+  - Shotgun9
+  - Shotgun3
+  - Sniper1
+  - Blackhole11
+  - GlockRNG7
+  - Sniper4
+  - Sniper
+  - Sniper2
+  - Shotgun14
+  - Shotgun5
+  - GlockRNG5
+  - Shotgun1
+  - GlockRNG1
+  - Sniper3
+  - Scar1
+  - Blackhole18
+  - Blackhole2
+  - Blackhole14
+  - Blackhole8
+  - Shotgun
+  - Blackhole13
+  - Shotgun10
+  - GlockRNG3
+  - Blackhole15
+  - Scar0
+  - Blackhole7
+  - Blackhole10
+  - Blackhole9
+  - Scar4
+  - Shotgun7
+  - Blackhole17
+  - GlockRNG
+  - Shotgun11
+  - GlockRNG2
+  - Shotgun4
+  - Shotgun13
+  - Blackhole1
+  - Scar
+  - Sniper6
+  - Shotgun6
+  - Blackhole4
+  - Shotgun8
+  - Shotgun2
+  - Blackhole3
+  - Scar3
+  - Scar2
+  m_RenderDataMap: {}
+  m_Tag: SpriteAtlas
+  m_IsVariant: 0
