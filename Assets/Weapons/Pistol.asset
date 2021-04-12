@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178a89644d1073e488ea44899ae80f27, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 91e11a1559eab11409fcd77edf9549f7, type: 3}
+  sprite: {fileID: 21300000, guid: 13ce857b3f4c0914dbdd8ec7ae3b06f0, type: 3}
   damage: 1
   maxAmmo: 9
   shootDelay: 0.5

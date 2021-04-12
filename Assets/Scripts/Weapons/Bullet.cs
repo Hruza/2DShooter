@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(rb.velocity.sqrMagnitude>0) transform.rotation = Quaternion.LookRotation(rb.velocity);
     }
 
     public enum onMapCollisionBehaviour { destroy, elasticBounce, nothing }

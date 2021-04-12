@@ -65,7 +65,7 @@ public class WeaponManager : MonoBehaviour
     }
 
     public void changeWeaponDirection(bool right){        
-        weaponSpritePivot.flipX = !weaponSpritePivot.flipX;
+        weaponSpritePivot.flipX = !right;
         weaponSpritePivotGO.transform.localPosition = new Vector3(
             (right ? 1 : -1) * Mathf.Abs(weaponSpritePivotGO.transform.localPosition.x),
                                weaponSpritePivotGO.transform.localPosition.y,

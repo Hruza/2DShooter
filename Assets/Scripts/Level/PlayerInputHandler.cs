@@ -1,9 +1,10 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.Events;
+
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -21,13 +22,11 @@ public class PlayerInputHandler : MonoBehaviour
 
     public UnityEvent Shoot;
 
-    public UnityEvent<bool> Flip;
-
     public UnityEvent ChangeWeaponUp;
 
     public UnityEvent ChangeWeaponDown;
 
-    private bool facingRight;
+    private bool facingRight=true;
     public bool FacingRight
     {
         get
@@ -38,7 +37,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (facingRight != value)
             {
-                Flip.Invoke(facingRight);
+                SendMessage("changeWeaponDirection",value);
                 facingRight = value;
             }
         }
