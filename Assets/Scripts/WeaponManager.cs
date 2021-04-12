@@ -64,18 +64,11 @@ public class WeaponManager : MonoBehaviour
         weaponSpritePivot.sprite = weaponInventory[index].weapon.sprite;
     }
 
-    public void changeWeaponDirection(bool right){
-        if(right){
-            weaponSpritePivot.flipX = false;
-            weaponSpritePivotGO.transform.localPosition=new Vector3(transform.localPosition.x,
-                                                            transform.localPosition.y,
-                                                            transform.localPosition.z);
-        }
-        else{
-            weaponSpritePivot.flipX = true;
-            weaponSpritePivotGO.transform.localPosition=new Vector3(-transform.localPosition.x,
-                                                             transform.localPosition.y,
-                                                             transform.localPosition.z);
-        }
+    public void changeWeaponDirection(bool right){        
+        weaponSpritePivot.flipX = !weaponSpritePivot.flipX;
+        weaponSpritePivotGO.transform.localPosition = new Vector3(
+            (right ? 1 : -1) * Mathf.Abs(weaponSpritePivotGO.transform.localPosition.x),
+                               weaponSpritePivotGO.transform.localPosition.y,
+                               weaponSpritePivotGO.transform.localPosition.z);
     }
 }
