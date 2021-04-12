@@ -23,7 +23,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     public UnityEvent Flip;
 
-    public UnityEvent<int> ChangeWeapon;
+    public UnityEvent ChangeWeaponUp;
+
+    public UnityEvent ChangeWeaponDown;
 
     private bool facingRight;
     public bool FacingRight
@@ -63,8 +65,8 @@ public class PlayerInputHandler : MonoBehaviour
         input.devices = new ReadOnlyArray<InputDevice>(devices);
         input.Gameplay.Jump.performed += ctx => Jump();
         input.Gameplay.Shoot.performed += ctx => Shoot.Invoke();
-        input.Gameplay.ChangeWeaponUp.performed += ctx => ChangeWeapon.Invoke(1);
-        input.Gameplay.ChangeWeaponDown.performed += ctx => ChangeWeapon.Invoke(-1);
+        input.Gameplay.ChangeWeaponUp.performed += ctx => ChangeWeaponUp.Invoke();
+        input.Gameplay.ChangeWeaponDown.performed += ctx => ChangeWeaponDown.Invoke();
         input.Gameplay.Enable();
     }
 
