@@ -43,9 +43,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""ChangeWeapon"",
+                    ""name"": ""ChangeWeaponUp"",
                     ""type"": ""Button"",
                     ""id"": ""9a900fa1-c785-4a94-9a6c-c619228fd3f8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ChangeWeaponDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""61a8a999-547d-47cc-83bf-a44398eaa169"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -142,23 +150,45 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d569214a-fc8b-4702-8d08-522a907f99c8"",
+                    ""id"": ""542a6b2b-22fe-4be9-9536-30ceb4de9e64"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ChangeWeapon"",
+                    ""action"": ""ChangeWeaponDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e6891c15-a112-4018-bac7-13671c55bf3a"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""id"": ""115f3a59-7440-47e9-b62d-890724606648"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ChangeWeapon"",
+                    ""action"": ""ChangeWeaponDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e3f07cc-90cc-4ff0-906f-4d66430b82bf"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeaponUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""834885c2-d617-41b7-b8b8-5d5adb7f50a9"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeaponUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -314,7 +344,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Shoot = m_Gameplay.FindAction("Shoot", throwIfNotFound: true);
-        m_Gameplay_ChangeWeapon = m_Gameplay.FindAction("ChangeWeapon", throwIfNotFound: true);
+        m_Gameplay_ChangeWeaponUp = m_Gameplay.FindAction("ChangeWeaponUp", throwIfNotFound: true);
+        m_Gameplay_ChangeWeaponDown = m_Gameplay.FindAction("ChangeWeaponDown", throwIfNotFound: true);
         // PlayerConnection
         m_PlayerConnection = asset.FindActionMap("PlayerConnection", throwIfNotFound: true);
         m_PlayerConnection_Choose = m_PlayerConnection.FindAction("Choose", throwIfNotFound: true);
@@ -372,7 +403,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Shoot;
-    private readonly InputAction m_Gameplay_ChangeWeapon;
+    private readonly InputAction m_Gameplay_ChangeWeaponUp;
+    private readonly InputAction m_Gameplay_ChangeWeaponDown;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -380,7 +412,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Shoot => m_Wrapper.m_Gameplay_Shoot;
-        public InputAction @ChangeWeapon => m_Wrapper.m_Gameplay_ChangeWeapon;
+        public InputAction @ChangeWeaponUp => m_Wrapper.m_Gameplay_ChangeWeaponUp;
+        public InputAction @ChangeWeaponDown => m_Wrapper.m_Gameplay_ChangeWeaponDown;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -399,9 +432,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Shoot.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShoot;
-                @ChangeWeapon.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeapon;
-                @ChangeWeapon.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeapon;
-                @ChangeWeapon.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeapon;
+                @ChangeWeaponUp.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeaponUp;
+                @ChangeWeaponUp.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeaponUp;
+                @ChangeWeaponUp.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeaponUp;
+                @ChangeWeaponDown.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeaponDown;
+                @ChangeWeaponDown.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeaponDown;
+                @ChangeWeaponDown.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnChangeWeaponDown;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -415,9 +451,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
-                @ChangeWeapon.started += instance.OnChangeWeapon;
-                @ChangeWeapon.performed += instance.OnChangeWeapon;
-                @ChangeWeapon.canceled += instance.OnChangeWeapon;
+                @ChangeWeaponUp.started += instance.OnChangeWeaponUp;
+                @ChangeWeaponUp.performed += instance.OnChangeWeaponUp;
+                @ChangeWeaponUp.canceled += instance.OnChangeWeaponUp;
+                @ChangeWeaponDown.started += instance.OnChangeWeaponDown;
+                @ChangeWeaponDown.performed += instance.OnChangeWeaponDown;
+                @ChangeWeaponDown.canceled += instance.OnChangeWeaponDown;
             }
         }
     }
@@ -476,7 +515,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
-        void OnChangeWeapon(InputAction.CallbackContext context);
+        void OnChangeWeaponUp(InputAction.CallbackContext context);
+        void OnChangeWeaponDown(InputAction.CallbackContext context);
     }
     public interface IPlayerConnectionActions
     {

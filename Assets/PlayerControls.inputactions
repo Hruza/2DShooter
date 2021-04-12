@@ -30,9 +30,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ChangeWeapon",
+                    "name": "ChangeWeaponUp",
                     "type": "Button",
                     "id": "9a900fa1-c785-4a94-9a6c-c619228fd3f8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChangeWeaponDown",
+                    "type": "Button",
+                    "id": "61a8a999-547d-47cc-83bf-a44398eaa169",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -129,23 +137,45 @@
                 },
                 {
                     "name": "",
-                    "id": "d569214a-fc8b-4702-8d08-522a907f99c8",
+                    "id": "542a6b2b-22fe-4be9-9536-30ceb4de9e64",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ChangeWeapon",
+                    "action": "ChangeWeaponDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "e6891c15-a112-4018-bac7-13671c55bf3a",
-                    "path": "<Gamepad>/buttonEast",
+                    "id": "115f3a59-7440-47e9-b62d-890724606648",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ChangeWeapon",
+                    "action": "ChangeWeaponDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e3f07cc-90cc-4ff0-906f-4d66430b82bf",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeWeaponUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "834885c2-d617-41b7-b8b8-5d5adb7f50a9",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeWeaponUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178a89644d1073e488ea44899ae80f27, type: 3}
+  m_Name: Scar
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 5b0abadc3376c094b8cec9ee024a79de, type: 3}
+  damage: 1
+  maxAmmo: 20
+  shootDelay: 0.5
+  projectileSpeed: 1
+  spread: 0
+  bullet: {fileID: 2717858225625471466, guid: c0cfd2f3bf61c044799a6e7158d00fa6, type: 3}
