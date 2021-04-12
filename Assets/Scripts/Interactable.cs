@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
-            other.gameObject.SendMessage("GotWeapon",weapon);
+            other.gameObject.SendMessage("GotWeapon", weapon);
         }
         NotifyOnInteraction?.Invoke();
         Destroy(this.gameObject);

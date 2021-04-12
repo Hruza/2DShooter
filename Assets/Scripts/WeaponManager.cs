@@ -23,6 +23,7 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         weaponSpritePivot.sprite = defaultWeapon.sprite;
+        weaponInventory=new List<weaponInInventory>{new weaponInInventory(defaultWeapon.maxAmmo,defaultWeapon)};
     }
 
     void Update()
