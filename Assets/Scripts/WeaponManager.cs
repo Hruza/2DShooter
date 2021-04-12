@@ -6,6 +6,9 @@ public class WeaponManager : MonoBehaviour
 {
     public WeaponInfo defaultWeapon;
     public SpriteRenderer weaponSpritePivot;
+    public GameObject weaponSpritePivotGO;
+
+    private SpriteRenderer pivot;
     private List<weaponInInventory> weaponInventory;
     private int currentWeaponIndex;
 
@@ -23,7 +26,7 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         weaponSpritePivot.sprite = defaultWeapon.sprite;
-        weaponInventory=new List<weaponInInventory>{new weaponInInventory(defaultWeapon.maxAmmo,defaultWeapon)};
+        weaponInventory = new List<weaponInInventory>{new weaponInInventory(defaultWeapon.maxAmmo,defaultWeapon)};
     }
 
     void Update()
@@ -57,7 +60,22 @@ public class WeaponManager : MonoBehaviour
     }
 
     public void changeWeaponVisual(int index)
-    {
+    {        
         weaponSpritePivot.sprite = weaponInventory[index].weapon.sprite;
+    }
+
+    public void changeWeaponDirection(bool right){
+        if(right){
+            weaponSpritePivot.flipX = false;
+            weaponSpritePivotGO.transform.localPosition=new Vector3(transform.localPosition.x,
+                                                            transform.localPosition.y,
+                                                            transform.localPosition.z);
+        }
+        else{
+            weaponSpritePivot.flipX = true;
+            weaponSpritePivotGO.transform.localPosition=new Vector3(-transform.localPosition.x,
+                                                             transform.localPosition.y,
+                                                             transform.localPosition.z);
+        }
     }
 }
