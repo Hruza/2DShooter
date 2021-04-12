@@ -46,7 +46,7 @@ public class ActionCamera : MonoBehaviour
 
     private Bounds target;
     private Vector3 velocity;
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (targets.Count > 0)
         {
