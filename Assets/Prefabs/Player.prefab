@@ -130,6 +130,12 @@ MonoBehaviour:
   Flip:
     m_PersistentCalls:
       m_Calls: []
+  ChangeWeaponUp:
+    m_PersistentCalls:
+      m_Calls: []
+  ChangeWeaponDown:
+    m_PersistentCalls:
+      m_Calls: []
   resetJumpLayers:
     serializedVersion: 2
     m_Bits: 72
