@@ -21,7 +21,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public UnityEvent Shoot;
 
-    public UnityEvent Flip;
+    public UnityEvent<bool> Flip;
 
     public UnityEvent ChangeWeaponUp;
 
@@ -38,7 +38,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (facingRight != value)
             {
-                Flip.Invoke();
+                Flip.Invoke(facingRight);
                 facingRight = value;
             }
         }
